@@ -144,32 +144,71 @@ function RoomSimulator() {
 export default function Home() {
   const features = [
     {
-      icon: '⚡',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <line x1="19" y1="10" x2="22" y2="7"/>
+          <line x1="22" y1="10" x2="19" y2="7"/>
+        </svg>
+      ),
       title: 'Rival Rooms',
       desc: 'Fan zones split by team loyalty. Trash talk, celebrate, and feel the rivalry in real time.',
     },
     {
-      icon: '🔄',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="23 4 23 10 17 10"/>
+          <polyline points="1 20 1 14 7 14"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+      ),
       title: 'Sync Engine',
       desc: 'WebSocket-powered playback sync keeps every fan on the same frame, no spoilers.',
     },
     {
-      icon: '🎯',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+        </svg>
+      ),
       title: 'Fan Reactions',
       desc: 'Emoji storms, voice cheers, and live polls that explode at match-defining moments.',
     },
     {
-      icon: '🏟️',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+          <polyline points="17 2 12 7 7 2"/>
+          <line x1="12" y1="12" x2="12" y2="17"/>
+          <line x1="9.5" y1="14.5" x2="14.5" y2="14.5"/>
+        </svg>
+      ),
       title: 'Watch Parties',
       desc: 'Invite your squad to a private room. Like watching together — from anywhere.',
     },
     {
-      icon: '📊',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"/>
+          <line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/>
+          <line x1="2" y1="20" x2="22" y2="20"/>
+        </svg>
+      ),
       title: 'Live Stats',
       desc: 'In-room live match stats, player performance overlays, and predictive score boards.',
     },
     {
-      icon: '🛡️',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+      ),
       title: 'Smart Moderation',
       desc: 'AI-powered community moderation keeps the energy high and the toxicity low.',
     },
@@ -326,7 +365,13 @@ export default function Home() {
                 onMouseEnter={e => e.currentTarget.style.background = '#0e0e1a'}
                 onMouseLeave={e => e.currentTarget.style.background = '#0a0a14'}
               >
-                <div style={{ fontSize: '2rem', marginBottom: '0.8rem' }}>{f.icon}</div>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: '52px', height: '52px', marginBottom: '1rem',
+                  background: 'rgba(255,61,61,0.08)',
+                  border: '1px solid rgba(255,61,61,0.2)',
+                  borderRadius: '10px',
+                }}>{f.icon}</div>
                 <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.3rem', letterSpacing: '0.04em', marginBottom: '0.6rem', color: '#f0f0f0' }}>{f.title}</h3>
                 <p style={{ color: '#6b6b8a', fontSize: '0.88rem', lineHeight: 1.7 }}>{f.desc}</p>
               </div>
