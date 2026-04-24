@@ -149,8 +149,7 @@ export default function Investors() {
             BUILT TO<br /><span style={{ color: '#ff3d3d' }}>SCALE.</span>
           </h1>
           <p style={{ color: '#8888aa', maxWidth: '480px', lineHeight: 1.75, fontSize: '0.95rem' }}>
-            Sportify is backed by a Y-Combinator seed round. We're building the sports content platform
-            for South Asia — and we're open to conversations with aligned investors.
+            Sportify is backed by a Y-Combinator seed round. We're building the sports content platform for a global audience — and we're open to conversations with aligned investors.
           </p>
         </div>
       </div>
