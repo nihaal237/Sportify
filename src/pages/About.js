@@ -18,6 +18,38 @@ function Section({ children, style = {} }) {
   );
 }
 
+const TrophyIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="8 21 12 21 16 21"/>
+    <line x1="12" y1="17" x2="12" y2="21"/>
+    <path d="M7 4H17L16 13C16 15.2 14.2 17 12 17C9.8 17 8 15.2 8 13L7 4Z"/>
+    <path d="M7 4C7 4 4 4 4 7C4 9.5 6 10 7 10"/>
+    <path d="M17 4C17 4 20 4 20 7C20 9.5 18 10 17 10"/>
+  </svg>
+);
+
+const TransparencyIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="11" cy="11" r="8"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="11" y1="8" x2="11" y2="14"/>
+    <line x1="8" y1="11" x2="14" y2="11"/>
+  </svg>
+);
+
+const PakistanIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+    <circle cx="12" cy="9" r="2.5"/>
+  </svg>
+);
+
+const UrgencyIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff3d3d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </svg>
+);
+
 export default function About() {
   const timeline = [
     { date: 'Jan 2026', event: 'Sportify LLC incorporated', note: 'Multi-founder LLC registered in Pakistan' },
@@ -29,10 +61,10 @@ export default function About() {
   ];
 
   const values = [
-    { title: 'Fan First', icon: '🏆', desc: 'Every decision starts with one question: does this make the fan experience better?' },
-    { title: 'Radical Transparency', icon: '🔍', desc: 'Open governance, published financials, and a board structure that holds us accountable.' },
-    { title: 'Built for Pakistan', icon: '🇵🇰', desc: 'Designed around cricket culture, Lahore-based, and compliant with PECA and SECP standards.' },
-    { title: 'Move with Urgency', icon: '⚡', desc: '44-month runway means we have time to build right — but we still sprint like the clock is ticking.' },
+    { title: 'Fan First', icon: <TrophyIcon />, desc: 'Every decision starts with one question: does this make the fan experience better?' },
+    { title: 'Radical Transparency', icon: <TransparencyIcon />, desc: 'Open governance, published financials, and a board structure that holds us accountable.' },
+    { title: 'Built for Pakistan', icon: <PakistanIcon />, desc: 'Designed around cricket culture, Lahore-based, and compliant with PECA and SECP standards.' },
+    { title: 'Move with Urgency', icon: <UrgencyIcon />, desc: '44-month runway means we have time to build right — but we still sprint like the clock is ticking.' },
   ];
 
   return (
@@ -105,7 +137,13 @@ export default function About() {
                 onMouseEnter={e => e.currentTarget.style.background = '#0e0e1a'}
                 onMouseLeave={e => e.currentTarget.style.background = '#0a0a14'}
               >
-                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{v.icon}</div>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: '52px', height: '52px', marginBottom: '1rem',
+                  background: 'rgba(255,61,61,0.08)',
+                  border: '1px solid rgba(255,61,61,0.2)',
+                  borderRadius: '10px',
+                }}>{v.icon}</div>
                 <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.3rem', letterSpacing: '0.04em', color: '#ff3d3d', marginBottom: '0.6rem' }}>{v.title}</h3>
                 <p style={{ color: '#6b6b8a', fontSize: '0.87rem', lineHeight: 1.7 }}>{v.desc}</p>
               </div>
