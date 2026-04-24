@@ -63,7 +63,7 @@ export default function About() {
   const values = [
     { title: 'Fan First', icon: <TrophyIcon />, desc: 'Every decision starts with one question: does this make the fan experience better?' },
     { title: 'Radical Transparency', icon: <TransparencyIcon />, desc: 'Open governance, published financials, and a board structure that holds us accountable.' },
-    { title: 'Built for Pakistan', icon: <PakistanIcon />, desc: 'Designed around cricket culture, Lahore-based, and compliant with PECA and SECP standards.' },
+    { title: 'Built for Fans', icon: <PakistanIcon />, desc: 'Designed around sports culture, built for fans globally, and compliant with international platform standards.' },
     { title: 'Move with Urgency', icon: <UrgencyIcon />, desc: '44-month runway means we have time to build right — but we still sprint like the clock is ticking.' },
   ];
 

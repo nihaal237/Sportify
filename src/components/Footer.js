@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
-          <p style={{ color: '#6b6b8a', fontSize: '0.78rem' }}>© 2026 Sportify LLC. All rights reserved. YC-backed startup, Lahore, Pakistan.</p>
+          <p style={{ color: '#6b6b8a', fontSize: '0.78rem' }}>© 2026 Sportify LLC. All rights reserved. YC-backed startup.</p>
           <p style={{ color: '#6b6b8a', fontSize: '0.78rem', fontFamily: "'JetBrains Mono', monospace" }}>Seed: $500K | Post-Money: ~$7.1M</p>
         </div>
       </div>
